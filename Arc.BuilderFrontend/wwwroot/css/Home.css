@@ -75,53 +75,74 @@ body {
 .chat {
     display: flex;
     flex-direction: column;
+    justify-content: space-between; /* Mesajlar ve composer arası boşluk */
     border-right: 1px solid var(--border);
     padding: 20px;
     background: #0f0f0f;
+    height: 100vh; /* Tam kolon yüksekliği */
 }
 
 .chat-messages {
-    flex: 1;
     overflow-y: auto;
-    margin-bottom: 16px;
-    padding-right: 8px;
+    flex-grow: 1; /* Composer aşağıda sabit kalsın */
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
+/* Mesaj kutuları */
 .chat-message {
-    padding: 10px 16px;
-    border-radius: 20px;
-    margin-bottom: 10px;
-    max-width: 70%;
+    padding: 12px 16px;
+    border-radius: 16px;
+    max-width: 60%;
+    word-wrap: break-word;
     color: #fff;
-    font-size: 15px;
-    line-height: 1.4;
 }
 
     .chat-message.user {
         background: var(--primary-solid);
-        align-self: flex-end;
+        align-self: flex-start;
     }
 
     .chat-message.ai {
         background: #1f2937;
-        align-self: flex-start;
+        align-self: flex-end;
     }
 
+/* Composer input ve buton */
 .composer {
     display: flex;
     gap: 12px;
     align-items: center;
     padding-top: 12px;
-    padding-bottom: 12px;
+    padding-bottom: 50px;
     background: #0f0f0f;
 }
+    .composer input {
+        flex: 1;
+        padding: 14px 16px;
+        border-radius: 18px;
+        border: 1px solid #374151;
+        background: #1f2937;
+        color: #fff;
+        outline: none;
+    }
+
+    .composer button {
+        padding: 14px 18px;
+        border-radius: 12px;
+        border: none;
+        background: var(--primary-solid);
+        color: #fff;
+        cursor: pointer;
+    }
 
 .input-wrapper {
     flex: 1;
     display: flex;
     background: #1f2937;
     border: 1px solid #374151;
-    border-radius: 24px;
+    border-radius: 50px;
     padding: 14px 18px;
     transition: all 0.2s ease;
 }
