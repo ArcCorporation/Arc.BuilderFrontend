@@ -169,3 +169,28 @@ body {
         fill: #fff;
     }
 
+/* Answer column */
+.answer {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    background: #0f0f0f;
+}
+
+.answer-card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px;
+    box-shadow: var(--shadow);
+}
+
+.answer-head {
+    font-weight: 600;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--primary-solid);
+}
