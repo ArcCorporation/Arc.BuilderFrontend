@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36414.22 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arc.BuilderFrontend", "Arc.BuilderFrontend\Arc.BuilderFrontend.csproj", "{FF901E0C-C9E8-474F-88CB-66275A9ECA95}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FF901E0C-C9E8-474F-88CB-66275A9ECA95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF901E0C-C9E8-474F-88CB-66275A9ECA95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF901E0C-C9E8-474F-88CB-66275A9ECA95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF901E0C-C9E8-474F-88CB-66275A9ECA95}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2B993E51-1095-4BE9-B6DB-9B9BFC404D38}
+	EndGlobalSection
+EndGlobal

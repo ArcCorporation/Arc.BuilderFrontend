@@ -1,0 +1,11 @@
+﻿@page "/"
+@using Arc.BuilderFrontend.Services
+@inject ChatBoxService.ChatService chatService
+
+<link href="css/Home.css" rel="stylesheet" />
+<main class="app">
+    <Arc.BuilderFrontend.Components.Pages.Components.ChatSideBar />
+    <Arc.BuilderFrontend.Components.Pages.Components.ChatWindow/>
+    <Arc.BuilderFrontend.Components.Pages.Components.AnswerPanel/>
+  
+</main>

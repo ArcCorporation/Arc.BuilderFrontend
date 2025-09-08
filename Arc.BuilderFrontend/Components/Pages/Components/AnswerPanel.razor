@@ -1,0 +1,24 @@
+﻿@using Arc.BuilderFrontend.Services
+@inject ChatBoxService.ChatService chatService
+
+<section class="answer">
+    <article class="answer-card">
+        <header class="answer-head">
+            <span class="badge">✨</span>
+            <span>AI Yanıtı</span>
+        </header>
+        <div>
+            @if (chatService.Messages.Any(m => !m.IsUser))
+            {
+                @foreach (var msg in chatService.Messages.Where(m => !m.IsUser))
+                {
+                    <p>@msg.Text</p>
+                }
+            }
+            else
+            {
+                <p>AI yanıtını görmek için prompt gönderin.</p>
+            }
+        </div>
+    </article>
+</section>

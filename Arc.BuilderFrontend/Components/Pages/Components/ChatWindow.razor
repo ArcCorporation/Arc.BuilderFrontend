@@ -1,0 +1,43 @@
+﻿@using Arc.BuilderFrontend.Services
+@inject ChatBoxService.ChatService chatService
+@using Microsoft.AspNetCore.Components.Web
+
+<section class="chat">
+    <div class="chat-messages">
+        @foreach (var msg in chatService.Messages)
+        {
+            <div class="chat-message @(msg.IsUser ? "user" : "ai")">@msg.Text</div>
+        }
+    </div>
+
+    <div class="composer">
+        <div class="input-wrapper">
+            <input type="text"
+                   placeholder="Prompt yazın…"
+                   @bind="chatService.Prompt"
+                   @onkeydown="HandleKeyDown" />
+        </div>
+        <button class="send" @onclick="Send">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3.4 20.6 21 12 3.4 3.4l2.7 7.4 8.1 1.2-8.1 1.2-2.7 7.4Z" fill="currentColor" />
+            </svg>
+        </button>
+    </div>
+
+</section>
+
+@code {
+    private async Task Send()
+    {
+        await chatService.SendMessage();
+        StateHasChanged();
+    }
+
+    private async Task HandleKeyDown(KeyboardEventArgs e)
+    {
+        if (e.Key == "Enter")
+        {
+            await Send();
+        }
+    }
+}

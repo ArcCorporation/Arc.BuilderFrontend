@@ -1,0 +1,24 @@
+﻿@page "/"
+@namespace ARCBuilderFrontend.Pages
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ARC Builder</title>
+    <base href="~/" />
+    <link href="css/Home.css" rel="stylesheet" />
+</head>
+<body>
+    <app>
+        <component type="typeof(Arc.BuilderFrontend.Pages.Home)" render-mode="ServerPrerendered" />
+    </app>
+
+    <script src="_framework/blazor.server.js"></script>
+</body>
+</html>
